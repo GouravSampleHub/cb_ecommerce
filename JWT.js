@@ -6,7 +6,7 @@ dotenv.config();
 class JWT 
 {
     generateAccessToken(userid) {
-        return jwt.sign({user:userid}, process.env.TOKEN_SECRET, 
+        return jwt.sign({user:userid}, "alshdlkahd@23423sdfdslhfSDFDSFsadse34h", 
             { expiresIn: '5m' });
     }
 
@@ -19,7 +19,7 @@ class JWT
             callback({status:false,code:401})
         else
         {
-            jwt.verify(token, process.env.TOKEN_SECRET, (err,tokendata)=>
+            jwt.verify(token, "alshdlkahd@23423sdfdslhfSDFDSFsadse34h", (err,tokendata)=>
             {
                 //console.log(err)    
                 if (err)
